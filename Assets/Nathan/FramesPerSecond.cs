@@ -6,23 +6,29 @@ public class FramesPerSecond : MonoBehaviour
 {
     Rect fpsRect;
     GUIStyle style;
-    // Start is called before the first frame update
+    private float fps;
+
     void Start()
     {
         fpsRect = new Rect(100, 100, 400, 100);
         style = new GUIStyle();
         style.fontSize = 30;
+
+        StartCoroutine(RecalculateFPS());
     }
 
+    IEnumerator RecalculateFPS()
+    {
+        while (true)
+        {
+            fps = 1 / Time.deltaTime;
+            yield return new WaitForSeconds(1);
+        }
+    }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    private void OnGUI()
+    void OnGUI()
     {
-        float fps = 1 / Time.deltaTime;
-        GUI.Label(fpsRect, "FPS: " + fps);
+        GUI.Label(fpsRect, "FPS: " + fps,style); 
     }
 }
