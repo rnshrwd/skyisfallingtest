@@ -220,7 +220,7 @@ MonoBehaviour:
   xPos: 0
   zPos: 0
   enemyCount: 0
-  spawnNumber: 0
+  spawnNumber: 1000
 --- !u!4 &414058273
 Transform:
   m_ObjectHideFlags: 0
