@@ -1,14 +1,13 @@
-﻿/*using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-pubic class Item : ScriptableObject {
-	new pubic string name = "New Item";
-	pubic Sprite icon = null;
-	pubic bool isDefaultItem = false;
+public class Item : ScriptableObject {
+	public string itemName;
+	public Sprite icon;
 
-	pubic virtual void Use ()
+	public virtual void Use()
 	{
-		Debug.Log("Using " + name);
+	
 	}
 }
-*/
