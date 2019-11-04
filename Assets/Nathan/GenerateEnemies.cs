@@ -7,7 +7,7 @@ public class GenerateEnemies : MonoBehaviour
     public GameObject theEnemy;
     public int xPos;
     public int zPos;
-    public int enemyCount;
+    private int enemyCount; 
     public int spawnNumber;
     void Start()
     {
@@ -18,8 +18,8 @@ public class GenerateEnemies : MonoBehaviour
     {
         while(enemyCount < spawnNumber)
         {
-            xPos = Random.Range(1, 200); // x position of RandomSpawn range
-            zPos = Random.Range(1, 200); // z position of RandomSpawn range
+            xPos = Random.Range(1, 100); // x position of RandomSpawn range
+            zPos = Random.Range(1, 100); // z position of RandomSpawn range
             Instantiate(theEnemy, new Vector3(xPos, 0.5f, zPos), Quaternion.identity);
             //yield return new WaitForSeconds(0.01f);
             enemyCount += 1;
