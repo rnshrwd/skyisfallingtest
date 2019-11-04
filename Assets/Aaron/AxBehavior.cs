@@ -21,6 +21,7 @@ public class AxBehavior : MonoBehaviour
         transform.position = playerPosition.transform.position + Vector3.left * 3.5f;
 
         /*Debug.Log("player position" + axPos);*/
+       
         if (Input.GetKey("return"))
         {
             transform.position = playerPosition.transform.position + Vector3.forward * 3.5f;

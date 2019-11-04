@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Wolfattack : MonoBehaviour
 {
-    private int health = 5;
+    public int health = 5;
     public GameObject gameOverText, restartButton;
 
     void Start()
@@ -20,6 +20,7 @@ public class Wolfattack : MonoBehaviour
         {
             Debug.Log("A wolf attacked you");
             health--;
+            Debug.Log("health: " + health);
         }
     }
 
@@ -27,8 +28,8 @@ public class Wolfattack : MonoBehaviour
     {
         if(health <= 0)
         {
-            //gameOverText.SetActive(true);
-            //restartButton.SetActive(true);
+            gameOverText.SetActive(true);
+            restartButton.SetActive(true);
             //gameObject.SetActive(false);
 
         }

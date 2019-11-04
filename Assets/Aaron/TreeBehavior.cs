@@ -12,7 +12,7 @@ public class TreeBehavior : MonoBehaviour
     {
 
 
-        if (other.gameObject.name == "ax")
+        if (other.gameObject.name == "player")
         {
             treeHealth -= 1;
             Debug.Log("health: " + treeHealth);
