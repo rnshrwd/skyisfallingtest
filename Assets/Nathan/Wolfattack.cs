@@ -28,8 +28,9 @@ public class Wolfattack : MonoBehaviour
     {
         if(health <= 0)
         {
-            gameOverText.SetActive(true);
+            // gameOverText.SetActive(true);
             restartButton.SetActive(true);
+            
             //gameObject.SetActive(false);
 
         }
