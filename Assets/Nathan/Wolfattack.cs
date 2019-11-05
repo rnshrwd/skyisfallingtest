@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 public class Wolfattack : MonoBehaviour
 {
     public int health = 5;
-    public GameObject gameOverText, restartButton;
 
     void Start()
     {
-        gameOverText.SetActive(false); // sets game over text 
-        restartButton.SetActive(false);
+
     }
 
     private void OnTriggerEnter(UnityEngine.Collider other)
@@ -28,10 +26,7 @@ public class Wolfattack : MonoBehaviour
     {
         if(health <= 0)
         {
-            // gameOverText.SetActive(true);
-            restartButton.SetActive(true);
-            
-            //gameObject.SetActive(false);
+            // do something
 
         }
     }
